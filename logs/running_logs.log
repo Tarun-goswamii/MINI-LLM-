@@ -1,0 +1,1081 @@
+[2025-11-12 23:09:15,747: INFO: server: Started server process [8900]]
+[2025-11-12 23:09:15,749: INFO: on: Waiting for application startup.]
+[2025-11-12 23:09:15,749: INFO: on: Application startup complete.]
+[2025-11-12 23:09:15,751: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-11-12 23:10:37,864: INFO: server: Shutting down]
+[2025-11-12 23:10:37,972: INFO: on: Waiting for application shutdown.]
+[2025-11-12 23:10:37,973: INFO: on: Application shutdown complete.]
+[2025-11-12 23:10:37,974: INFO: server: Finished server process [8900]]
+[2025-11-12 23:12:33,046: INFO: server: Started server process [18956]]
+[2025-11-12 23:12:33,086: INFO: on: Waiting for application startup.]
+[2025-11-12 23:12:33,087: INFO: on: Application startup complete.]
+[2025-11-12 23:12:33,088: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-11-12 23:19:19,802: INFO: server: Shutting down]
+[2025-11-12 23:19:19,912: INFO: on: Waiting for application shutdown.]
+[2025-11-12 23:19:19,913: INFO: on: Application shutdown complete.]
+[2025-11-12 23:19:19,914: INFO: server: Finished server process [18956]]
+[2025-11-12 23:20:36,648: INFO: server: Started server process [9860]]
+[2025-11-12 23:20:36,649: INFO: on: Waiting for application startup.]
+[2025-11-12 23:20:36,650: INFO: on: Application startup complete.]
+[2025-11-12 23:20:36,651: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2025-11-12 23:22:10,875: INFO: server: Shutting down]
+[2025-11-12 23:22:10,986: INFO: on: Waiting for application shutdown.]
+[2025-11-12 23:22:10,987: INFO: on: Application shutdown complete.]
+[2025-11-12 23:22:10,987: INFO: server: Finished server process [9860]]
+[2025-11-12 23:22:40,619: INFO: server: Started server process [8456]]
+[2025-11-12 23:22:40,620: INFO: on: Waiting for application startup.]
+[2025-11-12 23:22:40,621: INFO: on: Application startup complete.]
+[2025-11-12 23:22:40,622: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-12 23:26:31,806: INFO: server: Shutting down]
+[2025-11-12 23:26:31,915: INFO: on: Waiting for application shutdown.]
+[2025-11-12 23:26:31,916: INFO: on: Application shutdown complete.]
+[2025-11-12 23:26:31,917: INFO: server: Finished server process [8456]]
+[2025-11-14 21:33:09,973: INFO: server: Started server process [13340]]
+[2025-11-14 21:33:09,975: INFO: on: Waiting for application startup.]
+[2025-11-14 21:33:09,975: INFO: on: Application startup complete.]
+[2025-11-14 21:33:09,976: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-14 21:36:45,506: INFO: server: Shutting down]
+[2025-11-14 21:36:45,614: INFO: on: Waiting for application shutdown.]
+[2025-11-14 21:36:45,615: INFO: on: Application shutdown complete.]
+[2025-11-14 21:36:45,616: INFO: server: Finished server process [13340]]
+[2025-11-14 21:43:46,560: INFO: server: Started server process [20936]]
+[2025-11-14 21:43:46,562: INFO: on: Waiting for application startup.]
+[2025-11-14 21:43:46,562: INFO: on: Application startup complete.]
+[2025-11-14 21:43:46,563: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-14 21:47:37,470: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 21:47:37,517: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 21:47:37,518: INFO: common: created directory at: artifacts]
+[2025-11-14 21:47:37,519: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-14 21:47:37,521: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 41, in predict_route
+    raise e
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 1049, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 881, in get_tokenizer_config
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<12 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 144, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+        path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision, repo_type=repo_type
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2025-11-14 21:47:45,214: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 21:47:45,218: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 21:47:45,219: INFO: common: created directory at: artifacts]
+[2025-11-14 21:47:45,219: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-14 21:47:45,221: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 41, in predict_route
+    raise e
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 1049, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 881, in get_tokenizer_config
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<12 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 144, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+        path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision, repo_type=repo_type
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2025-11-14 21:48:53,169: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 21:48:53,171: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 21:48:53,172: INFO: common: created directory at: artifacts]
+[2025-11-14 21:48:53,173: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-14 21:48:53,174: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 184, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 93, in __call__
+    raise exc
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 21, in __call__
+    raise e
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 41, in predict_route
+    raise e
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 38, in predict_route
+    text = obj.predict(text)
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 1049, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\tokenization_auto.py", line 881, in get_tokenizer_config
+    resolved_config_file = cached_file(
+        pretrained_model_name_or_path,
+    ...<12 lines>...
+        _commit_hash=commit_hash,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 532, in cached_files
+    _get_cache_file_to_return(path_or_repo_id, filename, cache_dir, revision, repo_type)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 144, in _get_cache_file_to_return
+    resolved_file = try_to_load_from_cache(
+        path_or_repo_id, full_filename, cache_dir=cache_dir, revision=revision, repo_type=repo_type
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+    ...<2 lines>...
+    )
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+[2025-11-14 21:57:53,431: INFO: server: Shutting down]
+[2025-11-14 21:57:53,541: INFO: on: Waiting for application shutdown.]
+[2025-11-14 21:57:53,543: INFO: on: Application shutdown complete.]
+[2025-11-14 21:57:53,543: INFO: server: Finished server process [20936]]
+[2025-11-14 21:58:17,215: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 21:58:17,219: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 21:58:17,222: INFO: common: created directory at: artifacts]
+[2025-11-14 21:58:17,225: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-11-14 21:59:35,110: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 21:59:35,114: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 21:59:35,116: INFO: common: created directory at: artifacts]
+[2025-11-14 21:59:35,119: INFO: common: created directory at: artifacts/data_validation]
+[2025-11-14 22:00:38,729: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 22:00:38,733: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 22:00:38,736: INFO: common: created directory at: artifacts]
+[2025-11-14 22:00:38,738: INFO: common: created directory at: artifacts/data_transformation]
+[2025-11-14 22:00:58,565: INFO: 1434958058: artifacts/data_ingestion/data.zip download! with following info: 
+Connection: close
+Content-Length: 7903594
+Cache-Control: max-age=300
+Content-Security-Policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+Content-Type: application/zip
+ETag: "dbc016a060da18070593b83afff580c9b300f0b6ea4147a7988433e04df246ca"
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Frame-Options: deny
+X-XSS-Protection: 1; mode=block
+X-GitHub-Request-Id: E14C:266777:B045D:148338:691758A2
+Accept-Ranges: bytes
+Date: Fri, 14 Nov 2025 16:28:20 GMT
+Via: 1.1 varnish
+X-Served-By: cache-bom-vanm7210023-BOM
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1763137700.671290,VS0,VE608
+Vary: Authorization,Accept-Encoding
+Access-Control-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Fastly-Request-ID: 75c5fc0916b1e5b0e0f04f1b48a9e7f53251b13e
+Expires: Fri, 14 Nov 2025 16:33:20 GMT
+Source-Age: 0
+
+]
+[2025-11-14 22:01:25,744: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 22:01:25,747: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 22:01:25,749: INFO: common: created directory at: artifacts]
+[2025-11-14 22:01:25,751: INFO: common: created directory at: artifacts/model_trainer]
+[2025-11-14 22:01:29,895: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-14 22:03:42,116: WARNING: file_download: Error while downloading from https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-14 22:05:15,100: WARNING: file_download: Error while downloading from https://huggingface.co/google/pegasus-cnn_dailymail/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-14 22:57:17,876: INFO: server: Started server process [24336]]
+[2025-11-14 22:57:17,877: INFO: on: Waiting for application startup.]
+[2025-11-14 22:57:17,878: INFO: on: Application startup complete.]
+[2025-11-14 22:57:17,879: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-14 23:00:51,779: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 23:00:51,813: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 23:00:51,814: INFO: common: created directory at: artifacts]
+[2025-11-14 23:00:51,815: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-14 23:02:42,336: INFO: server: Shutting down]
+[2025-11-14 23:02:42,445: INFO: on: Waiting for application shutdown.]
+[2025-11-14 23:02:42,445: INFO: on: Application shutdown complete.]
+[2025-11-14 23:02:42,446: INFO: server: Finished server process [24336]]
+[2025-11-14 23:02:55,641: INFO: server: Started server process [22716]]
+[2025-11-14 23:02:55,642: INFO: on: Waiting for application startup.]
+[2025-11-14 23:02:55,642: INFO: on: Application startup complete.]
+[2025-11-14 23:02:55,643: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-14 23:04:38,953: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-14 23:04:38,955: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-14 23:04:38,956: INFO: common: created directory at: artifacts]
+[2025-11-14 23:04:38,957: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-14 23:04:42,888: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-15 13:02:09,842: INFO: server: Started server process [4248]]
+[2025-11-15 13:02:09,844: INFO: on: Waiting for application startup.]
+[2025-11-15 13:02:09,845: INFO: on: Application startup complete.]
+[2025-11-15 13:02:09,845: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-15 13:10:40,949: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-15 13:10:40,953: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-15 13:10:40,954: INFO: common: created directory at: artifacts]
+[2025-11-15 13:10:40,956: INFO: common: created directory at: artifacts/model_trainer]
+[2025-11-15 13:13:41,827: INFO: server: Shutting down]
+[2025-11-15 13:14:59,439: INFO: on: Waiting for application shutdown.]
+[2025-11-15 13:14:59,440: INFO: on: Application shutdown complete.]
+[2025-11-15 13:14:59,440: INFO: server: Finished server process [4248]]
+[2025-11-15 13:59:54,704: INFO: server: Started server process [14280]]
+[2025-11-15 13:59:54,705: INFO: on: Waiting for application startup.]
+[2025-11-15 13:59:54,706: INFO: on: Application startup complete.]
+[2025-11-15 13:59:54,707: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-15 14:01:52,029: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-15 14:01:52,032: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-15 14:01:52,033: INFO: common: created directory at: artifacts]
+[2025-11-15 14:01:52,034: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-16 12:08:52,859: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-16 12:08:52,863: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-16 12:08:52,865: INFO: common: created directory at: artifacts]
+[2025-11-16 12:08:52,867: INFO: common: created directory at: artifacts/model_trainer]
+[2025-11-16 12:30:27,542: INFO: server: Started server process [21040]]
+[2025-11-16 12:30:27,543: INFO: on: Waiting for application startup.]
+[2025-11-16 12:30:27,544: INFO: on: Application startup complete.]
+[2025-11-16 12:30:27,545: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-16 13:02:11,501: INFO: server: Started server process [13612]]
+[2025-11-16 13:02:11,503: INFO: on: Waiting for application startup.]
+[2025-11-16 13:02:11,503: INFO: on: Application startup complete.]
+[2025-11-16 13:02:11,505: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-16 13:03:32,601: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-16 13:03:32,605: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-16 13:03:32,606: INFO: common: created directory at: artifacts]
+[2025-11-16 13:03:32,607: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-16 13:07:21,322: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 49, in predict_route
+    summary = obj.predict(input_data.text)
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 34, in predict
+    pipe = pipeline("summarization", model=model_path, tokenizer=tokenizer)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\pipelines\__init__.py", line 1008, in pipeline
+    framework, model = infer_framework_load_model(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        adapter_path if adapter_path is not None else model,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        **model_kwargs,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\pipelines\base.py", line 292, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 316, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 4910, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        transformers_explicit_filename=transformers_explicit_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 1207, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(
+        pretrained_model_name_or_path, filename, **cached_file_kwargs
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1171, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        incomplete_path=Path(blob_path + ".incomplete"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        xet_file_data=xet_file_data,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1723, in _download_to_tmp_and_move
+    xet_get(
+    ~~~~~~~^
+        incomplete_path=incomplete_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        displayed_filename=filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 629, in xet_get
+    download_files(
+    ~~~~~~~~~~~~~~^
+        xet_download_info,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        progress_updater=[progress_updater],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+KeyboardInterrupt
+[2025-11-16 22:56:12,930: INFO: server: Started server process [17620]]
+[2025-11-16 22:56:12,932: INFO: on: Waiting for application startup.]
+[2025-11-16 22:56:12,932: INFO: on: Application startup complete.]
+[2025-11-16 22:56:12,933: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-16 22:58:11,376: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-16 22:58:11,396: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-16 22:58:11,398: INFO: common: created directory at: artifacts]
+[2025-11-16 22:58:11,400: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-16 23:18:03,633: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 49, in predict_route
+    summary = obj.predict(input_data.text)
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 34, in predict
+    pipe = pipeline("summarization", model=model_path, tokenizer=tokenizer)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\pipelines\__init__.py", line 1008, in pipeline
+    framework, model = infer_framework_load_model(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        adapter_path if adapter_path is not None else model,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        **model_kwargs,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\pipelines\base.py", line 292, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\models\auto\auto_factory.py", line 600, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 316, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 4910, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        transformers_explicit_filename=transformers_explicit_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\modeling_utils.py", line 1207, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(
+        pretrained_model_name_or_path, filename, **cached_file_kwargs
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 321, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1171, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        incomplete_path=Path(blob_path + ".incomplete"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        xet_file_data=xet_file_data,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1723, in _download_to_tmp_and_move
+    xet_get(
+    ~~~~~~~^
+        incomplete_path=incomplete_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        displayed_filename=filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 629, in xet_get
+    download_files(
+    ~~~~~~~~~~~~~~^
+        xet_download_info,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        progress_updater=[progress_updater],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+KeyboardInterrupt
+[2025-11-16 23:38:25,191: INFO: server: Started server process [3232]]
+[2025-11-16 23:38:25,193: INFO: on: Waiting for application startup.]
+[2025-11-16 23:38:25,193: INFO: on: Application startup complete.]
+[2025-11-16 23:38:25,194: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-16 23:41:29,147: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-16 23:41:29,150: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-16 23:41:29,152: INFO: common: created directory at: artifacts]
+[2025-11-16 23:41:29,153: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 00:01:03,165: ERROR: httptools_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\starlette\routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        dependant=dependant, values=values, is_coroutine=is_coroutine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\fastapi\routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\app.py", line 48, in predict_route
+    obj = PredictionPipeline()
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 13, in __init__
+    self._initialize_pipeline()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\tarun\OneDrive\Pictures\Desktop\MINI LLM Summarizier\Text-Summarization-NLP-Project\src\textSummarizer\pipeline\prediction.py", line 34, in _initialize_pipeline
+    self.pipeline = pipeline(
+                    ~~~~~~~~^
+        "summarization",
+        ^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        framework="pt"
+        ^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\pipelines\__init__.py", line 1027, in pipeline
+    framework, model = infer_framework_load_model(
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        adapter_path if adapter_path is not None else model,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        **model_kwargs,
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\pipelines\base.py", line 293, in infer_framework_load_model
+    model = model_class.from_pretrained(model, **kwargs)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\models\auto\auto_factory.py", line 604, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\modeling_utils.py", line 277, in _wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\modeling_utils.py", line 4900, in from_pretrained
+    checkpoint_files, sharded_metadata = _get_resolved_checkpoint_files(
+                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path=pretrained_model_name_or_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<15 lines>...
+        transformers_explicit_filename=transformers_explicit_filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\modeling_utils.py", line 1066, in _get_resolved_checkpoint_files
+    resolved_archive_file = cached_file(
+        pretrained_model_name_or_path, filename, **cached_file_kwargs
+    )
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\utils\hub.py", line 322, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+  File "C:\Users\tarun\miniconda3_new\Lib\site-packages\transformers\utils\hub.py", line 479, in cached_files
+    hf_hub_download(
+    ~~~~~~~~~~~~~~~^
+        path_or_repo_id,
+        ^^^^^^^^^^^^^^^^
+    ...<10 lines>...
+        local_files_only=local_files_only,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\utils\_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1010, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+        # Destination
+    ...<14 lines>...
+        force_download=force_download,
+    )
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1171, in _hf_hub_download_to_cache_dir
+    _download_to_tmp_and_move(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        incomplete_path=Path(blob_path + ".incomplete"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        xet_file_data=xet_file_data,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 1723, in _download_to_tmp_and_move
+    xet_get(
+    ~~~~~~~^
+        incomplete_path=incomplete_path,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        displayed_filename=filename,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tarun\AppData\Roaming\Python\Python313\site-packages\huggingface_hub\file_download.py", line 629, in xet_get
+    download_files(
+    ~~~~~~~~~~~~~~^
+        xet_download_info,
+        ^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        progress_updater=[progress_updater],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+KeyboardInterrupt
+[2025-11-17 00:03:48,162: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 00:03:48,166: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 00:03:48,168: INFO: common: created directory at: artifacts]
+[2025-11-17 00:03:48,170: INFO: common: created directory at: artifacts/model_trainer]
+[2025-11-17 00:04:36,742: INFO: server: Started server process [13824]]
+[2025-11-17 00:04:36,744: INFO: on: Waiting for application startup.]
+[2025-11-17 00:04:36,744: INFO: on: Application startup complete.]
+[2025-11-17 00:04:36,745: INFO: server: Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)]
+[2025-11-17 00:06:36,474: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 00:06:36,478: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 00:06:36,480: INFO: common: created directory at: artifacts]
+[2025-11-17 00:06:36,481: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 11:28:09,090: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 11:28:09,116: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 11:28:09,117: INFO: common: created directory at: artifacts]
+[2025-11-17 11:28:09,118: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 11:28:16,127: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:28:58,572: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:28:59,923: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:31:09,140: WARNING: file_download: Error while downloading from https://huggingface.co/google/pegasus-cnn_dailymail/resolve/refs%2Fpr%2F12/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:31:14,356: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:31:27,442: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:31:38,495: WARNING: _http: '(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 107e14ea-b306-4b40-9761-d62cf76ff647)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:31:38,495: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:32:00,063: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:32:29,541: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:32:43,119: WARNING: _http: '(ReadTimeoutError("HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 9768621a-d285-46d2-85c8-187f026ed50a)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:32:43,120: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:32:54,939: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:33:13,578: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Max retries exceeded.]
+[2025-11-17 11:33:13,856: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:33:33,407: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:33:45,768: WARNING: _http: '(ReadTimeoutError("HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 0019a074-9c9f-46aa-8946-0ed415e5719e)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:33:45,769: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:34:09,442: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:34:35,653: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 11:37:37,684: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 11:37:37,690: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 11:37:37,691: INFO: common: created directory at: artifacts]
+[2025-11-17 11:37:37,693: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 11:37:39,339: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:49:54,851: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 11:49:54,854: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 11:49:54,855: INFO: common: created directory at: artifacts]
+[2025-11-17 11:49:54,856: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 11:49:57,749: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 11:50:16,662: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E4E2F6B610>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: c62468c7-ba4a-49cb-9de8-0d18f4ab729c)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:16,676: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:50:17,683: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E4E73B0DD0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 8179abbb-9510-42c6-93af-fff526a4da48)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:17,684: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:50:19,687: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E4E73B1E10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b0e989a4-9c88-4d6b-990a-e7853fa37035)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:19,688: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:50:25,036: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 59a1d10a-7504-4c04-b2f2-2f8a6dc245b0)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:25,036: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:50:33,221: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 812e47e5-63c2-4f85-8668-ec934bb2bc7f)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:33,222: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:50:41,388: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 4c2f19a7-a146-4682-950a-22ca0270e100)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:50:41,596: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: f44cbcb8-c880-4c09-adda-c35cd519eb68)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:50:41,597: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:50:42,854: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: c01f1669-1e99-495d-bbf0-21bb4b0c1eff)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:50:42,854: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:50:45,177: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 4e3a13fd-b6fe-4d55-a01b-6bcd9bcb2b9d)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:50:45,178: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:50:49,304: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 30df3bb5-e3b0-477c-a4b2-ae6610f8e137)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:50:49,305: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:50:57,558: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: b53a9822-fc3d-4398-8624-2e9f42df417d)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:50:57,559: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:51:05,774: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: d9e03f29-b6ae-4de9-bd7f-89c9a6073c7e)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:51:06,593: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 0fb85f32-83d4-43a4-9f16-f044682ac592)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:06,594: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:51:07,843: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 95e07709-e895-48f6-acc4-f4a19c0543f6)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:07,844: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:51:10,095: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 7c6212a6-57ec-45aa-a599-bee3f2142093)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:10,096: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:51:14,294: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 674ceea4-263f-461b-97cd-e607ca4b9b2e)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:14,295: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:51:22,906: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 5ea292fc-f3d5-47a0-b27a-ea112eeacee6)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:22,907: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:51:32,236: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: b29ed4c5-d7cc-4f62-af2a-0f7c48b5e7ff)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:51:32,550: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 673f4d3e-d81c-485b-9af1-d2366c95ec47)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:32,551: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:51:33,849: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 0e2d34d8-3ae0-4e8a-937c-b6ab3f3a0702)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:33,850: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:51:37,013: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: fd954eb3-9aa6-4068-a2e2-ad0a8c44e830)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:37,013: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:51:41,189: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: b3a94a41-44e3-48ad-b7ea-868d6d8dc496)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:41,191: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:51:49,195: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001E4E2F320D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 4f8dfe84-c657-460c-b76e-1ce7f003a29f)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:49,196: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:51:57,428: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: c3b06b83-7a56-43b6-b3b5-5a9719da4af7)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:51:57,642: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 25c3d9e6-08ff-4724-98aa-46e67b272c09)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:51:57,643: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:51:58,852: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 90ac096b-adf6-4d67-89eb-c3a0cd23338c)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:51:58,854: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:52:00,982: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 35ea9d21-34dc-41f3-94b6-b2b6ef77ca46)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:52:00,982: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:52:05,082: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 26592bcc-e5e9-4314-aad1-656deca896e7)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:52:05,083: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:52:13,435: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: f251e61c-7711-4f33-a2cc-aa8ecd71c459)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:52:13,435: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:52:21,542: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 5f3f44f4-e552-4422-a8ff-7e86149ae3d3)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:52:22,187: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 349e2698-03a9-40ac-9a69-00d8c32919ac)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:22,189: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:52:23,312: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 1857b922-6168-45dd-92dd-842876cd6cf9)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:23,313: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:52:25,414: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 00eda7d5-e421-4525-a3ad-fdde2b48d270)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:25,415: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:52:29,659: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 7b3ccfbc-15e6-480a-b4ee-20dfc2375cc4)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:29,659: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:52:37,942: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 7463bd03-53e6-489e-89e8-c92b317fccb6)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:37,943: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:52:46,277: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 9a99cf21-ca4f-46fb-bc34-79a31644aed7)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 11:52:46,886: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: c93bc3c3-c38c-4fea-bfa7-569c5e04f5a2)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:52:46,887: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:52:48,024: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 294e5871-556f-4dc3-aae3-a526e7270c0e)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:52:48,024: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:52:50,162: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 2710ed66-ad7d-4660-b454-3e5f06524231)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:52:50,162: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:52:54,247: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 58ec8121-e33e-4c15-b8d3-40bc0680a97e)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:52:54,248: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:53:03,504: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: ccd9edb7-adaa-4437-b11d-28a5a3113823)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:53:03,505: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:53:11,685: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: 27e9e981-3a3d-4ee6-91bd-ee2941361641)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 11:53:11,794: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: f11c0959-8820-4ac5-b833-f0b254995453)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:53:11,795: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 11:53:13,027: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: d5f58af8-740e-4f40-92f5-b83685f867c9)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:53:13,027: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 11:53:15,561: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: c0e9b21f-358b-4533-9071-34aaa0107df4)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:53:15,562: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 11:53:19,791: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: bc104178-b828-4231-b5c3-55ca9c83b45d)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:53:19,792: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 11:53:27,935: WARNING: _http: '(ProtocolError('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None)), '(Request ID: d6844315-8327-4ba6-97cc-7f66756091a4)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin.index.json]
+[2025-11-17 11:53:27,937: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 11:54:55,071: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 11:54:55,076: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 11:54:55,078: INFO: common: created directory at: artifacts]
+[2025-11-17 11:54:55,080: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 11:54:57,117: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 12:00:53,881: WARNING: file_download: Error while downloading from https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...]
+[2025-11-17 12:00:54,895: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5B6EC7D50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 3ba786e3-2ced-48f5-9470-6649a82e80f9)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 12:00:54,902: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 12:00:55,906: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5B6ED94D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 4ef84056-5a30-498a-b1a1-c5f88825bbc4)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 12:00:55,907: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 12:00:57,982: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001A5B6EDA4D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 8b85586d-8cd4-424f-954a-9291c1215f8c)')' thrown while requesting GET https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/pytorch_model.bin]
+[2025-11-17 12:00:57,996: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 12:01:14,027: WARNING: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-11-17 12:02:39,777: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 12:02:39,780: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 12:02:39,783: INFO: common: created directory at: artifacts]
+[2025-11-17 12:02:39,785: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 12:04:16,620: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 12:04:16,623: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 12:04:16,625: INFO: common: created directory at: artifacts]
+[2025-11-17 12:04:16,626: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 16:49:07,212: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-11-17 16:49:07,236: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-11-17 16:49:07,238: INFO: common: created directory at: artifacts]
+[2025-11-17 16:49:07,238: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-11-17 16:49:07,255: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B1010>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 96ca652b-5ca6-42f5-945b-6f6e706a976f)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:07,256: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 16:49:08,260: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B2550>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 5b5c368f-6e99-4203-aa81-da661a0aba5f)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:08,261: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 16:49:10,265: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B9990>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: ac06c3cd-65e1-40d4-805c-be8b3e8e3e24)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:10,266: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 16:49:14,270: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B3810>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: b45d70d8-0f05-4dec-9446-3ae022230852)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:14,270: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 16:49:22,274: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B0390>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a17541c3-6f0f-4e8d-a7d8-14ddcbe2dc0f)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:22,275: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 16:49:30,280: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA717B89D0>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 8c28ee2f-13f1-4e64-a86c-abf2729ded53)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/config.json]
+[2025-11-17 16:49:33,848: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CC3F10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 5b3c4121-97ee-416a-9242-486cdc720dce)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:33,848: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 16:49:34,852: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75891290>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a12926cc-8a35-4af4-b1d1-7e175da56b51)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:34,853: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 16:49:36,857: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75D14A90>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: babaf996-e8af-4dc1-920a-7662e49941c9)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:36,861: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 16:49:40,864: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CF6190>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: a9ab6f9e-36e1-4487-b666-4e59117bfbd8)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:40,865: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 16:49:48,870: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA0001D950>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 51a8f553-7a41-44e1-bb0e-2806040ffa0e)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:48,871: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 16:49:56,882: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CE4810>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: e905ef69-074a-42b8-930b-4971a79970d3)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/generation_config.json]
+[2025-11-17 16:49:56,919: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75C91350>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: f14081a2-4f96-4808-9aa3-eb6de1a855be)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]
+[2025-11-17 16:49:56,920: WARNING: _http: Retrying in 1s [Retry 1/5].]
+[2025-11-17 16:49:57,924: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75C90C10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 321331e8-856e-403f-9812-182421bfbb32)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]
+[2025-11-17 16:49:57,925: WARNING: _http: Retrying in 2s [Retry 2/5].]
+[2025-11-17 16:49:59,929: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CA0F10>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 31b85398-7f44-48e9-9df4-37e4991389ce)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]
+[2025-11-17 16:49:59,929: WARNING: _http: Retrying in 4s [Retry 3/5].]
+[2025-11-17 16:50:03,932: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CCB790>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 9b78fa50-8708-4630-b4fc-5a01ae888447)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]
+[2025-11-17 16:50:03,933: WARNING: _http: Retrying in 8s [Retry 4/5].]
+[2025-11-17 16:50:11,942: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CC9C50>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 2ad6ad1f-a142-4775-9e2b-467eba14b373)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]
+[2025-11-17 16:50:11,943: WARNING: _http: Retrying in 8s [Retry 5/5].]
+[2025-11-17 16:50:19,947: WARNING: _http: '(MaxRetryError('HTTPSConnectionPool(host=\'huggingface.co\', port=443): Max retries exceeded with url: /sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x000001FA75CA7790>: Failed to resolve \'huggingface.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: dc7b09b4-5254-4f73-9afa-f7e8c913b4ee)')' thrown while requesting HEAD https://huggingface.co/sshleifer/distilbart-cnn-12-6/resolve/main/custom_generate/generate.py]

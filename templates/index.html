@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Summarizer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            height: calc(100vh - 200px);
+        }
+
+        .input-section, .output-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #667eea;
+        }
+
+        .textarea-container {
+            position: relative;
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: 2px solid #e1e5e9;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            resize: none;
+            outline: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        textarea:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .char-count {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #667eea;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            flex: 1;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .loading i {
+            font-size: 3rem;
+            animation: spin 1s linear infinite;
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .output-text {
+            background: #f8f9fa;
+            border: 2px dashed #e1e5e9;
+            border-radius: 15px;
+            padding: 20px;
+            min-height: 200px;
+            flex: 1;
+            line-height: 1.6;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .output-text.has-content {
+            background: white;
+            border: 2px solid #e1e5e9;
+            color: #333;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                height: auto;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .button-container {
+                flex-direction: column;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .error-message {
+            background: #fee;
+            border: 1px solid #fcc;
+            color: #c33;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .success-message {
+            background: #efe;
+            border: 1px solid #cfc;
+            color: #3c3;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1><i class="fas fa-magic"></i> AI Text Summarizer</h1>
+        <p>Powered by Advanced NLP Models - Transform long text into concise summaries</p>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Input Section -->
+            <div class="input-section">
+                <h2 class="section-title">
+                    <i class="fas fa-edit"></i>
+                    Input Text
+                </h2>
+                <div class="textarea-container">
+                    <textarea 
+                        id="inputText" 
+                        placeholder="Paste your long text here... (articles, documents, conversations, etc.)"
+                        maxlength="5000"
+                    ></textarea>
+                    <div class="char-count">
+                        <span id="charCount">0</span>/5000
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button id="summarizeBtn" class="btn btn-primary">
+                        <i class="fas fa-compress-alt"></i>
+                        Summarize Text
+                    </button>
+                    <button id="clearBtn" class="btn btn-secondary">
+                        <i class="fas fa-trash"></i>
+                        Clear
+                    </button>
+                </div>
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-section">
+                <h2 class="section-title">
+                    <i class="fas fa-file-alt"></i>
+                    Summary Output
+                </h2>
+                <div id="loadingIndicator" class="loading">
+                    <i class="fas fa-cog"></i>
+                    <p>Generating summary using AI models...</p>
+                    <small>This may take a few moments</small>
+                </div>
+                <div id="outputText" class="output-text">
+                    <div>
+                        <i class="fas fa-arrow-left" style="color: #ccc; font-size: 2rem; margin-bottom: 15px;"></i>
+                        <p>Your summarized text will appear here</p>
+                        <small style="color: #999;">Enter text on the left and click "Summarize Text"</small>
+                    </div>
+                </div>
+                <div class="button-container" style="margin-top: 20px;">
+                    <button id="copyBtn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-copy"></i>
+                        Copy Summary
+                    </button>
+                    <button id="downloadBtn" class="btn btn-secondary" disabled>
+                        <i class="fas fa-download"></i>
+                        Download
+                    </button>
+                </div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="originalWords">0</div>
+                        <div class="stat-label">Original Words</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="summaryWords">0</div>
+                        <div class="stat-label">Summary Words</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="compressionRatio">0%</div>
+                        <div class="stat-label">Compression</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 AI Text Summarizer. Built with FastAPI & Transformers.</p>
+    </footer>
+
+    <script>
+        const inputText = document.getElementById('inputText');
+        const outputText = document.getElementById('outputText');
+        const summarizeBtn = document.getElementById('summarizeBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const copyBtn = document.getElementById('copyBtn');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const charCount = document.getElementById('charCount');
+        const errorMessage = document.getElementById('errorMessage');
+        const successMessage = document.getElementById('successMessage');
+
+        // Character counter
+        inputText.addEventListener('input', function() {
+            const count = this.value.length;
+            charCount.textContent = count;
+            
+            if (count > 4800) {
+                charCount.style.color = '#e74c3c';
+            } else {
+                charCount.style.color = '#667eea';
+            }
+
+            hideMessages();
+        });
+
+        // Clear button
+        clearBtn.addEventListener('click', function() {
+            inputText.value = '';
+            charCount.textContent = '0';
+            clearOutput();
+            hideMessages();
+        });
+
+        // Summarize button
+        summarizeBtn.addEventListener('click', async function() {
+            const text = inputText.value.trim();
+            
+            if (!text) {
+                showError('Please enter some text to summarize.');
+                return;
+            }
+
+            if (text.length < 50) {
+                showError('Text is too short. Please enter at least 50 characters for meaningful summarization.');
+                return;
+            }
+
+            // Show loading state
+            summarizeBtn.disabled = true;
+            loadingIndicator.style.display = 'block';
+            outputText.style.display = 'none';
+            hideMessages();
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    displaySummary(data.summary, text);
+                    showSuccess('Summary generated successfully!');
+                } else {
+                    throw new Error(data.detail || 'Failed to generate summary');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showError('Error generating summary: ' + error.message);
+                clearOutput();
+            } finally {
+                // Hide loading state
+                summarizeBtn.disabled = false;
+                loadingIndicator.style.display = 'none';
+                outputText.style.display = 'flex';
+            }
+        });
+
+        // Copy button
+        copyBtn.addEventListener('click', async function() {
+            const summaryText = outputText.textContent;
+            try {
+                await navigator.clipboard.writeText(summaryText);
+                showSuccess('Summary copied to clipboard!');
+            } catch (error) {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = summaryText;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showSuccess('Summary copied to clipboard!');
+            }
+        });
+
+        // Download button
+        downloadBtn.addEventListener('click', function() {
+            const summaryText = outputText.textContent;
+            const blob = new Blob([summaryText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'summary_' + new Date().getTime() + '.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showSuccess('Summary downloaded successfully!');
+        });
+
+        function displaySummary(summary, originalText) {
+            outputText.innerHTML = summary;
+            outputText.classList.add('has-content');
+            
+            copyBtn.disabled = false;
+            downloadBtn.disabled = false;
+
+            // Update statistics
+            updateStats(originalText, summary);
+        }
+
+        function clearOutput() {
+            outputText.innerHTML = `
+                <div>
+                    <i class="fas fa-arrow-left" style="color: #ccc; font-size: 2rem; margin-bottom: 15px;"></i>
+                    <p>Your summarized text will appear here</p>
+                    <small style="color: #999;">Enter text on the left and click "Summarize Text"</small>
+                </div>
+            `;
+            outputText.classList.remove('has-content');
+            copyBtn.disabled = true;
+            downloadBtn.disabled = true;
+
+            // Reset statistics
+            document.getElementById('originalWords').textContent = '0';
+            document.getElementById('summaryWords').textContent = '0';
+            document.getElementById('compressionRatio').textContent = '0%';
+        }
+
+        function updateStats(originalText, summary) {
+            const originalWords = originalText.split(/\s+/).filter(word => word.length > 0).length;
+            const summaryWords = summary.split(/\s+/).filter(word => word.length > 0).length;
+            const compressionRatio = originalWords > 0 ? Math.round((1 - summaryWords / originalWords) * 100) : 0;
+
+            document.getElementById('originalWords').textContent = originalWords;
+            document.getElementById('summaryWords').textContent = summaryWords;
+            document.getElementById('compressionRatio').textContent = compressionRatio + '%';
+        }
+
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        }
+
+        function showSuccess(message) {
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        function hideMessages() {
+            errorMessage.style.display = 'none';
+            successMessage.style.display = 'none';
+        }
+
+        // Enter key support
+        inputText.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'Enter') {
+                summarizeBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
